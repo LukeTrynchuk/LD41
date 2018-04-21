@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CreateGameBoardFunctiom : MonoBehaviour {
+public class CreateGameBoardFunctiom{
 
-    Vector3[,] boxPositions;
+    public Vector3[,] boxPositions;
 
 	// Use this for initialization
-	void Start () {
+	public CreateGameBoardFunctiom () {
         boxPositions = new Vector3[5,5];
 
         for(int x = 0; x<5;x++)
