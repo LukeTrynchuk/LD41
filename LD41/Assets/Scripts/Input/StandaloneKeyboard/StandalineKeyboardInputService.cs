@@ -107,7 +107,7 @@ namespace LD.UserInput
 		{
 			#if UNITY_STANDALONE
 				ServiceLocator.Register<IInputService>(this);
-			#elif
+			#else
 				gameObject.SetActive(false);
 			#endif
 		}
