@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using LD.General;
+using UnityEngine.Audio;
 
 namespace LD.Audio
 {
@@ -9,18 +11,45 @@ namespace LD.Audio
 
     [RequireComponent(typeof(AudioSource))]
     [RequireComponent(typeof(TransitionAudioMixer))]
-    public class BackgroundMusicBehaviour : MonoBehaviour
+    public class BackgroundMusicBehaviour : MonoBehaviour, ITogglable
     {
 
         #region Private Variables
         [SerializeField]
         private AudioClip[] m_musicClips;
 
+        [SerializeField]
+        private AudioMixerSnapshot m_pauseSnapShot;
+
+        [SerializeField]
+        private AudioMixerSnapshot m_normalSnapShot;
+
+        private bool m_paused = false;
         private AudioSource m_source;
         private TransitionAudioMixer m_transitionAudio;
         #endregion
 
         #region Main Methods
+        public void Toggle()
+        {
+            if(!m_paused)
+            {
+				m_paused = !m_paused;
+    
+                m_transitionAudio.m_TransitionToGroup = m_pauseSnapShot;
+                m_transitionAudio.SetTransitionTime(1f);
+                m_transitionAudio.Transition();
+                return;            
+            }
+
+            m_paused = !m_paused;
+
+            m_transitionAudio.m_TransitionToGroup = m_normalSnapShot;
+            m_transitionAudio.SetTransitionTime(1f);
+            m_transitionAudio.Transition();
+
+        }
+
         private void Start()
         {
             InitializeComponents();

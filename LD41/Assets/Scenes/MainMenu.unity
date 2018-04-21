@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 80563810}
   - component: {fileID: 80563809}
   - component: {fileID: 80563808}
+  - component: {fileID: 80563811}
   m_Layer: 5
   m_Name: CloseButton
   m_TagString: Untagged
@@ -190,6 +191,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 80563811}
+        m_MethodName: ToggleItems
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1262806682}
         m_MethodName: Toggle
         m_Mode: 1
@@ -238,6 +250,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 80563806}
+--- !u!114 &80563811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 80563806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 924fd966b3b21426ab4dfa5cc0b30bff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_gameObjectsToToggle:
+  - {fileID: 1455305123}
 --- !u!1001 &115330582
 Prefab:
   m_ObjectHideFlags: 0
@@ -770,6 +795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_gameObjectsToToggle:
   - {fileID: 1262806677}
+  - {fileID: 1455305123}
 --- !u!95 &586229589
 Animator:
   serializedVersion: 3
@@ -1402,16 +1428,16 @@ RectTransform:
   m_GameObject: {fileID: 1190569913}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3256281, y: 0.32562798, z: 0.32562798}
+  m_LocalScale: {x: 0.23422082, y: 0.23422073, z: 0.23422073}
   m_Children:
   - {fileID: 812088554}
   m_Father: {fileID: 1262806678}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: 32}
-  m_SizeDelta: {x: 1094.1, y: 1672.9}
+  m_AnchorMin: {x: 0.32900003, y: 0}
+  m_AnchorMax: {x: 0.66200006, y: 1}
+  m_AnchoredPosition: {x: 2.5, y: 32}
+  m_SizeDelta: {x: 835.1, y: 1234.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1190569915
 MonoBehaviour:
@@ -1921,6 +1947,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_musicClips:
   - {fileID: 8300000, guid: 59350fe155551460a8f79a86a7eb629f, type: 3}
+  m_pauseSnapShot: {fileID: 245928657352844816, guid: 5273f5e9603b44a5988cf91ce7d132d2,
+    type: 2}
+  m_normalSnapShot: {fileID: 245910052384125616, guid: 5273f5e9603b44a5988cf91ce7d132d2,
+    type: 2}
 --- !u!82 &1455305125
 AudioSource:
   m_ObjectHideFlags: 0
