@@ -1,10 +1,10 @@
-﻿namespace GreenApple.Poke.Core.Services
-{
-	using System.Collections;
-	using System.Collections.Generic;
-	using UnityEngine;
-	using System;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System;
 
+namespace LD.Core.Services
+{
 	public class ServiceReference<T> where T: class
 	{
 		#region Public Variables
