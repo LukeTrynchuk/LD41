@@ -168,3 +168,5 @@ abbec566e92946508809865e3b05215d Assembly-CSharp.dll:.SwitchBlock
 a989b4fcf9e3f1be246b3de1290da1c1 Assembly-CSharp.dll:LD.General.ToggleToggles
 9e2c05c6056d72981b6bba264a67ff87 Assembly-CSharp.dll:LD.Audio.BackgroundMusicBehaviour
 e2c154ee10690a1e05a7cebd9ee642c0 Assembly-CSharp.dll:LD.Audio.TransitionAudioMixer
+6de4eda1a7396285747bb561b39f9222 Assembly-CSharp.dll:LD.Audio.UISFXController
+bff27b8858ca9aaeb8952c180e16453a Assembly-CSharp.dll:LD.UI.LogoBehaviour
