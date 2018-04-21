@@ -3,6 +3,10 @@ using UnityEngine.SceneManagement;
 
 namespace LD.General
 {
+    /// <summary>
+    /// This class will advance to the next scene in the build index when 
+    /// its Advance() method is called. Meant for sequential scene management.
+    /// </summary>
     public class AdvanceToNextScene : MonoBehaviour
     {
         #region Main Methods
