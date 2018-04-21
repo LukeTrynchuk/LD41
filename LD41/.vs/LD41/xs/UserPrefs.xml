@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{855AD4BC-D690-5F48-1B48-EA6DD5D790C8}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Scene/TransitionToGameScene.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Core/ServiceLocator/Service.cs" Line="2" Column="2" />
+      <File FileName="Assets/Scripts/Core/ServiceLocator/ServiceLocator.cs" Line="7" Column="1" />
+      <File FileName="Assets/Scripts/Core/ServiceLocator/ServiceReference.cs" Line="6" Column="1" />
+      <File FileName="Assets/Scripts/Input/StandaloneController/StandaloneControllerInputService.cs" Line="6" Column="18" />
+      <File FileName="Assets/Scripts/Input/StandaloneKeyboard/StandalineKeyboardInputService.cs" Line="3" Column="19" />
+      <File FileName="Assets/Scripts/Input/IInputService.cs" Line="14" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/General/DoNotDestroyOnLoad.cs" Line="15" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/Temp/ExampleServiceUser.cs" Line="36" Column="6" NotebookId="1" />
+      <File FileName="Assets/Scripts/Scene/TransitionToGameScene.cs" Line="5" Column="19" NotebookId="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.LD41 PreferredExecutionTarget="Unity.Editor" />
+</Properties>
