@@ -166,3 +166,5 @@ abbec566e92946508809865e3b05215d Assembly-CSharp.dll:.SwitchBlock
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:LD.General.AdvanceToNextScene
 55475146bf9d242629b3ed871080bdaf Assembly-CSharp.dll:LD.UI.InstructionsBehaviour
 a989b4fcf9e3f1be246b3de1290da1c1 Assembly-CSharp.dll:LD.General.ToggleToggles
+9e2c05c6056d72981b6bba264a67ff87 Assembly-CSharp.dll:LD.Audio.BackgroundMusicBehaviour
+e2c154ee10690a1e05a7cebd9ee642c0 Assembly-CSharp.dll:LD.Audio.TransitionAudioMixer
