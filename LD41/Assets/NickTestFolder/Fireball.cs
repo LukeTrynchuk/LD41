@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using LD.UI;
 
 public class Fireball : MonoBehaviour {
 
     float lifeTimer = 3;
+    KillCounter_Behaviour killCounter;
 	// Use this for initialization
 	void Start () {
 		
@@ -18,4 +20,13 @@ public class Fireball : MonoBehaviour {
             Destroy(transform.gameObject);
         }
 	}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Enemy")
+        {
+            killCounter.Increment(1);
+            Destroy(other.gameObject);
+        }
+    }
 }

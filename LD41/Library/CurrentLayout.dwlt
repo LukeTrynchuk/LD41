@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 12}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -319,7 +319,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 41
+  controlID: 28
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -343,7 +343,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 42
+  controlID: 29
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -367,7 +367,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 43
+  controlID: 30
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -473,7 +473,7 @@ MonoBehaviour:
   - {fileID: 30}
   - {fileID: 31}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 1
 --- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -580,9 +580,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 3a0d0100
+    m_SelectedIDs: a00f0100
     m_LastClickedID: 0
-    m_ExpandedIDs: 36eaf8ff66edf8ff2a34f9ff1e0afaff940efaffb81efaff4469faff0c7afafffc36fbffdc44fbffcc61fbfffe68fbff8082fbff4e8ffbff1e09fcff2209fcff2409fcff2609fcffae11fcffb234fcff384ffcff1054fcfff85ffcfff661fcff0c68fcff2873fcff1078fcff8484fcffa089fcff9896fcffac9bfcff08a9fcff48affcff26bbfcff1ac2fcffbacdfcff28d3fcffc0e2fcff8a02fdff8003fdff3410fdffe219fdff5844fdff4645fdff4c45fdff4e45fdff00000000da420100bc430100a44401008c45010074460100644701001c48010088490100804a0100185a010078680100dc6f010016700100
+    m_ExpandedIDs: 56abfbffbae6fbffa01bfcffea3cfcffde50fcff5c66fcfff674fcffe82efdffee2efdffe83bfdff5246fdff6051fdffa254fdff00000000ee570100a05b0100385d0100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -636,7 +636,24 @@ MonoBehaviour:
     m_KeySerializationHelper:
     - {fileID: 110788542, guid: 2d98f5cb725b39144814bd1b6f89549a, type: 2}
     - {fileID: 1107132281287821992, guid: 65e2767bde71aba46a3461a6de6ac91b, type: 2}
+    - {fileID: 1107850200567687188, guid: 5ffe8943017cc4142993b79ba8a8b66e, type: 2}
     m_ValueSerializationHelper:
+    - e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
     - e00: 1
       e01: 0
       e02: 0
@@ -710,14 +727,14 @@ MonoBehaviour:
     height: 724
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 4911.360935498005
+  lastFramingTime: 845.1087761700433
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.98809886, y: -1.0507874, z: 0.3326962}
+    m_Target: {x: 1621.3699, y: 470.15857, z: 25.379639}
     speed: 2
-    m_Value: {x: 0.98809886, y: -1.0507874, z: 0.3326962}
+    m_Value: {x: 1621.3699, y: 470.15857, z: 25.379639}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -741,13 +758,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.50457436, y: 0.37324926, z: -0.25617748, w: 0.7351619}
+    m_Target: {x: 0.046383355, y: 0.066176765, z: -0.003079508, w: 0.99672455}
     speed: 2
-    m_Value: {x: 0.5045743, y: 0.37324923, z: -0.25617746, w: 0.73516184}
+    m_Value: {x: 0.046383355, y: 0.066176765, z: -0.003079508, w: 0.99672455}
   m_Size:
-    m_Target: 9.102858
+    m_Target: 2664.487
     speed: 2
-    m_Value: 9.102858
+    m_Value: 2664.487
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -790,306 +807,10 @@ MonoBehaviour:
   logPanelAutoScroll: 1
   currentFrame: 163911
   logs:
-    lastGrabbedIndex: 2
-    lastGrabbedCount: 3
+    lastGrabbedIndex: 1
+    lastGrabbedCount: 2
     proEntries: []
     newEntries:
-    - logType: 4
-      ignore: 0
-      processed: 1
-      tempFilterProcessed: 1
-      remoteEndPoint: Local
-      logPanelVisible: 1
-      logPanelIndex: 0
-      logOutputHeight: -1
-      listIndex: 0
-      nativeIndex: 0
-      nativeIdentifier: 0
-      originalLog: 'NullReferenceException: Object reference not set to an instance
-        of an object'
-      originalStackTrace: 'NullReferenceException: Object reference not set to an
-        instance of an object
-
-        UnityEditor.Graphs.Edge.WakeUp () (at C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Edge.cs:114)
-
-        UnityEditor.Graphs.Graph.DoWakeUpEdges (System.Collections.Generic.List`1
-        inEdges, System.Collections.Generic.List`1 ok, System.Collections.Generic.List`1
-        error, Boolean inEdgesUsedToBeValid) (at C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Graph.cs:387)
-
-        UnityEditor.Graphs.Graph.WakeUpEdges (Boolean clearSlotEdges) (at C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Graph.cs:286)
-
-        UnityEditor.Graphs.Graph.WakeUp (Boolean force) (at C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Graph.cs:272)
-
-        UnityEditor.Graphs.Graph.WakeUp () (at C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Graph.cs:250)
-
-        UnityEditor.Graphs.Graph.OnEnable () (at C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Graph.cs:245)
-
-'
-      nativeFileName: C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Edge.cs
-      nativeLineNumber: 114
-      watchName: 
-      logText: 'NullReferenceException: Object reference not set to an instance of
-        an object'
-      logTruncatedText: 'NullReferenceException: Object reference not set to an instance
-        of an object'
-      logColumnText: 
-      fileName: 
-      className: 
-      namespaceName: 
-      lineCount: 1
-      hasSourceCode: 0
-      timeStamp: 0.019999999552965164
-      timeFrame: 2
-      instanceID: -180178
-      collapsedCount: 1
-      cachedHeight: -1
-      cachedHeightLogWidth: 0
-      stackEntries:
-      - fileName: C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Edge.cs
-        fileNameWithoutAssets: C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Edge.cs
-        fileNameWithoutAssetsPlusLineNumber: C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Edge.cs:114
-        fileNameWithoutPath: Edge.cs
-        fileNameWithoutPathPlusLineNumber: Edge.cs:114
-        instanceID: -1
-        className: Edge
-        methodName: WakeUp
-        namespaceName: UnityEditor.Graphs
-        lineNumber: 114
-        charNumber: 0
-        stackLabel: Edge.WakeUp()
-        stackLabel2: '    C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Edge.cs:114'
-        stackLabelContent:
-          m_Text: 
-          m_Image: {fileID: 0}
-          m_Tooltip: 
-        stackLabelWidth: 0
-        stackLabelHeight: 0
-        stackSourceLineHeight: 0
-        sourceCode: []
-        sourceCodeUpdated: 0
-        showSource: 1
-      - fileName: C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Graph.cs
-        fileNameWithoutAssets: C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Graph.cs
-        fileNameWithoutAssetsPlusLineNumber: C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Graph.cs:387
-        fileNameWithoutPath: Graph.cs
-        fileNameWithoutPathPlusLineNumber: Graph.cs:387
-        instanceID: -1
-        className: Graph
-        methodName: DoWakeUpEdges
-        namespaceName: UnityEditor.Graphs
-        lineNumber: 387
-        charNumber: 0
-        stackLabel: Graph.DoWakeUpEdges()
-        stackLabel2: '    C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Graph.cs:387'
-        stackLabelContent:
-          m_Text: 
-          m_Image: {fileID: 0}
-          m_Tooltip: 
-        stackLabelWidth: 0
-        stackLabelHeight: 0
-        stackSourceLineHeight: 0
-        sourceCode: []
-        sourceCodeUpdated: 0
-        showSource: 1
-      - fileName: C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Graph.cs
-        fileNameWithoutAssets: C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Graph.cs
-        fileNameWithoutAssetsPlusLineNumber: C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Graph.cs:286
-        fileNameWithoutPath: Graph.cs
-        fileNameWithoutPathPlusLineNumber: Graph.cs:286
-        instanceID: -1
-        className: Graph
-        methodName: WakeUpEdges
-        namespaceName: UnityEditor.Graphs
-        lineNumber: 286
-        charNumber: 0
-        stackLabel: Graph.WakeUpEdges()
-        stackLabel2: '    C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Graph.cs:286'
-        stackLabelContent:
-          m_Text: 
-          m_Image: {fileID: 0}
-          m_Tooltip: 
-        stackLabelWidth: 0
-        stackLabelHeight: 0
-        stackSourceLineHeight: 0
-        sourceCode: []
-        sourceCodeUpdated: 0
-        showSource: 1
-      - fileName: C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Graph.cs
-        fileNameWithoutAssets: C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Graph.cs
-        fileNameWithoutAssetsPlusLineNumber: C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Graph.cs:272
-        fileNameWithoutPath: Graph.cs
-        fileNameWithoutPathPlusLineNumber: Graph.cs:272
-        instanceID: -1
-        className: Graph
-        methodName: WakeUp
-        namespaceName: UnityEditor.Graphs
-        lineNumber: 272
-        charNumber: 0
-        stackLabel: Graph.WakeUp()
-        stackLabel2: '    C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Graph.cs:272'
-        stackLabelContent:
-          m_Text: 
-          m_Image: {fileID: 0}
-          m_Tooltip: 
-        stackLabelWidth: 0
-        stackLabelHeight: 0
-        stackSourceLineHeight: 0
-        sourceCode: []
-        sourceCodeUpdated: 0
-        showSource: 1
-      - fileName: C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Graph.cs
-        fileNameWithoutAssets: C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Graph.cs
-        fileNameWithoutAssetsPlusLineNumber: C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Graph.cs:250
-        fileNameWithoutPath: Graph.cs
-        fileNameWithoutPathPlusLineNumber: Graph.cs:250
-        instanceID: -1
-        className: Graph
-        methodName: WakeUp
-        namespaceName: UnityEditor.Graphs
-        lineNumber: 250
-        charNumber: 0
-        stackLabel: Graph.WakeUp()
-        stackLabel2: '    C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Graph.cs:250'
-        stackLabelContent:
-          m_Text: 
-          m_Image: {fileID: 0}
-          m_Tooltip: 
-        stackLabelWidth: 0
-        stackLabelHeight: 0
-        stackSourceLineHeight: 0
-        sourceCode: []
-        sourceCodeUpdated: 0
-        showSource: 1
-      - fileName: C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Graph.cs
-        fileNameWithoutAssets: C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Graph.cs
-        fileNameWithoutAssetsPlusLineNumber: C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Graph.cs:245
-        fileNameWithoutPath: Graph.cs
-        fileNameWithoutPathPlusLineNumber: Graph.cs:245
-        instanceID: -1
-        className: Graph
-        methodName: OnEnable
-        namespaceName: UnityEditor.Graphs
-        lineNumber: 245
-        charNumber: 0
-        stackLabel: Graph.OnEnable()
-        stackLabel2: '    C:/buildslave/unity/build/Editor/Graphs/UnityEditor.Graphs/Graph.cs:245'
-        stackLabelContent:
-          m_Text: 
-          m_Image: {fileID: 0}
-          m_Tooltip: 
-        stackLabelWidth: 0
-        stackLabelHeight: 0
-        stackSourceLineHeight: 0
-        sourceCode: []
-        sourceCodeUpdated: 0
-        showSource: 1
-      ignoredStackEntries: []
-      lastMatchedCount: 0
-      belongsToFilters: []
-      belongsToStandardFilters: []
-      assignedTempFilter:
-        name: 
-        isEnabled: 1
-        collapsed: 0
-        itemGUID: 
-        filterName: 
-        mainColor: {r: 1, g: 1, b: 1, a: 1}
-        isStandardFilter: 0
-        isTempFilter: 0
-        useAdvancedColors: 0
-        customTextColor: {r: 1, g: 1, b: 1, a: 1}
-        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
-        swallowStandard: 1
-        standardCanSwallow: 0
-        overrideStandardColors: 1
-        overrideStandardIcon: 1
-        collapseIconBackground: 0
-        collapseIconSymbol: 0
-        collapseIconLetter: 0
-        collapseIconTexture: 0
-        useIconBackground: 1
-        useIconSymbol: 0
-        useIconLetter: 0
-        useIconTexture: 0
-        filterFormatVersion: -1
-        iconColorize: 0
-        useAndOpForSearchList: 0
-        searchList:
-          list: []
-          selectionList: 0
-          collapsable: 1
-          collapsed: 0
-        iconLetter:
-          name: 
-          isEnabled: 1
-          collapsed: 0
-          itemGUID: 
-          iconType: 1
-          iconType2: 1
-          iconText: A
-          useIconTextFirstLetter: 1
-          useIconLogColor: 1
-          iconColor: {r: 1, g: 1, b: 1, a: 1}
-          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
-          iconTextureGUID: 
-          useIconShadow: 1
-          iconOffset: {x: 0, y: 0}
-          iconShadowOffset: {x: 0.5, y: 0.5}
-          iconSize: 13
-        iconSymbol:
-          name: 
-          isEnabled: 1
-          collapsed: 0
-          itemGUID: 
-          iconType: 1
-          iconType2: 1
-          iconText: A
-          useIconTextFirstLetter: 1
-          useIconLogColor: 1
-          iconColor: {r: 1, g: 1, b: 1, a: 1}
-          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
-          iconTextureGUID: 
-          useIconShadow: 1
-          iconOffset: {x: 0, y: 0}
-          iconShadowOffset: {x: 0.5, y: 0.5}
-          iconSize: 13
-        iconBackground:
-          name: 
-          isEnabled: 1
-          collapsed: 0
-          itemGUID: 
-          iconType: 1
-          iconType2: 1
-          iconText: A
-          useIconTextFirstLetter: 1
-          useIconLogColor: 1
-          iconColor: {r: 1, g: 1, b: 1, a: 1}
-          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
-          iconTextureGUID: 
-          useIconShadow: 1
-          iconOffset: {x: 0, y: 0}
-          iconShadowOffset: {x: 0.5, y: 0.5}
-          iconSize: 13
-        iconTexture:
-          name: 
-          isEnabled: 1
-          collapsed: 0
-          itemGUID: 
-          iconType: 1
-          iconType2: 1
-          iconText: A
-          useIconTextFirstLetter: 1
-          useIconLogColor: 1
-          iconColor: {r: 1, g: 1, b: 1, a: 1}
-          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
-          iconTextureGUID: 
-          useIconShadow: 1
-          iconOffset: {x: 0, y: 0}
-          iconShadowOffset: {x: 0.5, y: 0.5}
-          iconSize: 13
-        showInToolbar: 1
-        hideLabelInToolbar: 0
-        hideWhenNoMatches: 0
     - logType: 2
       ignore: 0
       processed: 1
@@ -1099,7 +820,7 @@ MonoBehaviour:
       logPanelIndex: 0
       logOutputHeight: -1
       listIndex: 0
-      nativeIndex: 1
+      nativeIndex: 0
       nativeIdentifier: 0
       originalLog: 'Asset ''Dialog'': Transition ''AnyState -> dialog_hide'' in state
         ''AnyState'' doesn''t have an Exit Time or any condition, transition will
@@ -1126,7 +847,7 @@ MonoBehaviour:
       hasSourceCode: 0
       timeStamp: 0.019999999552965164
       timeFrame: 2
-      instanceID: 67358
+      instanceID: 67986
       collapsedCount: 1
       cachedHeight: -1
       cachedHeightLogWidth: 0
@@ -1247,7 +968,7 @@ MonoBehaviour:
       logPanelIndex: 0
       logOutputHeight: -1
       listIndex: 0
-      nativeIndex: 2
+      nativeIndex: 1
       nativeIdentifier: 0
       originalLog: 'Asset ''Dialog'': Transition ''AnyState -> dialog_open'' in state
         ''AnyState'' doesn''t have an Exit Time or any condition, transition will
@@ -1274,7 +995,7 @@ MonoBehaviour:
       hasSourceCode: 0
       timeStamp: 0.019999999552965164
       timeFrame: 2
-      instanceID: 67360
+      instanceID: 67988
       collapsedCount: 1
       cachedHeight: -1
       cachedHeightLogWidth: 0
@@ -1439,9 +1160,9 @@ MonoBehaviour:
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: fa200100
-    m_LastClickedID: 73978
-    m_ExpandedIDs: 00000000a8080100b2080100d00b0100ba1701005e1f0100ce2101001e240100da2e01003e320100cc3201003e360100ffffff7f
+    m_SelectedIDs: 58230100
+    m_LastClickedID: 74584
+    m_ExpandedIDs: 000000000e0b0100180b0100360e01001c1a0100bc210100582301002a2401007a260100363101009a3401002835010098380100ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1469,7 +1190,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a8080100b2080100be080100d00b0100ba1701005e1f0100da2e01003e320100cc3201003e360100
+    m_ExpandedIDs: 000000000e0b0100180b0100360e01001c1a0100bc2101002a2401007a260100363101009a3401002835010098380100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1644,8 +1365,8 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 1702
-    y: 94
-    width: 652
-    height: 1271
+    x: 1793
+    y: 92
+    width: 401
+    height: 1080
   m_PersistentViewDataDictionary: {fileID: 0}
