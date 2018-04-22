@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using LD.Animation;
 using LD.UI;
+using LD.General;
 
 public class EnemyAI : MonoBehaviour {
 
@@ -10,6 +11,7 @@ public class EnemyAI : MonoBehaviour {
     ReaperAnimationHelper animHelper;
     GameObject player;
     HealthCounter_Behaviour hpBeh;
+    CameraShake camShake;
 
     public Vector2 position;
     Vector2 playerPosition;
@@ -24,6 +26,7 @@ public class EnemyAI : MonoBehaviour {
         transform.position = gameBoard.boxPositions[(int)position.x, (int)position.y];
         animHelper = GetComponent<ReaperAnimationHelper>();
         hpBeh = GameObject.FindWithTag("HealthCounter").GetComponent<HealthCounter_Behaviour>();
+        camShake = GameObject.FindWithTag("CameraShake").GetComponent<CameraShake>();
     }
 	
 	// Update is called once per frame
@@ -37,6 +40,7 @@ public class EnemyAI : MonoBehaviour {
                 animHelper.AttackPosition(gameBoard.boxPositions[(int)playerPosition.x, (int)playerPosition.y]);
                 player.GetComponent<PlayerInfo>().health -= 1;
                 hpBeh.SetHealth(player.GetComponent<PlayerInfo>().health);
+                camShake.Shake(1);
             }
             else
             {

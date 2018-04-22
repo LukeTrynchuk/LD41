@@ -9,6 +9,7 @@ TagManager:
   - KillCounter
   - HealthCounter
   - Environment
+  - CameraShake
   layers:
   - Default
   - TransparentFX

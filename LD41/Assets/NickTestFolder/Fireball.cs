@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using LD.UI;
+using LD.General;
 
 public class Fireball : MonoBehaviour {
 
     float lifeTimer = 3;
     KillCounter_Behaviour killCounter;
     GameObject environment;
-	// Use this for initialization
-	void Start () {
+    CameraShake camShake;
+    // Use this for initialization
+    void Start () {
         killCounter = GameObject.FindWithTag("KillCounter").GetComponent<KillCounter_Behaviour>();
         environment = GameObject.FindWithTag("Environment");
-	}
+        camShake = GameObject.FindWithTag("CameraShake").GetComponent<CameraShake>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -33,6 +36,7 @@ public class Fireball : MonoBehaviour {
             enemyObj.transform.localScale = new Vector3(0.05f, 0.05f, 0.05f);
             enemyObj.GetComponent<EnemyAI>().position = new Vector2((int)Random.Range(0, 5), (int)Random.Range(0, 5));
             Destroy(other.gameObject);
+            camShake.Shake(1);
         }
     }
 }
