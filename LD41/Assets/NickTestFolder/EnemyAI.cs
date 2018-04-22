@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using LD.Animation;
 
 public class EnemyAI : MonoBehaviour {
 
     CreateGameBoardFunctiom gameBoard;
+    ReaperAnimationHelper animHelper;
+    GameObject player;
 
     public Vector2 position;
     Vector2 playerPosition;
-    GameObject player;
 
     bool xvalue = false;
     bool yvalue = false;
@@ -17,6 +19,7 @@ public class EnemyAI : MonoBehaviour {
         player = GameObject.FindWithTag("Player");
         gameBoard = new CreateGameBoardFunctiom();
         transform.position = gameBoard.boxPositions[(int)position.x, (int)position.y];
+        animHelper = GetComponent<ReaperAnimationHelper>();
     }
 	
 	// Update is called once per frame
@@ -26,7 +29,7 @@ public class EnemyAI : MonoBehaviour {
         if (player.GetComponent<PlayerInfo>().action)
         {
             EnemyMovement();
-            transform.position = new Vector3(gameBoard.boxPositions[(int)position.x, (int)position.y].x, transform.position.y, gameBoard.boxPositions[(int)position.x, (int)position.y].z);
+            animHelper.MoveTo(new Vector3(gameBoard.boxPositions[(int)position.x, (int)position.y].x, transform.position.y, gameBoard.boxPositions[(int)position.x, (int)position.y].z));
         }
 
 	}
@@ -66,4 +69,6 @@ public class EnemyAI : MonoBehaviour {
         xvalue = false;
         yvalue = false;
     }
+
+
 }

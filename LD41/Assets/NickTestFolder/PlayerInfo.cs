@@ -3,36 +3,55 @@ using System.Collections.Generic;
 using UnityEngine;
 using LD.Core.Services;
 using LD.UserInput;
+using LD.Animation;
 
 public class PlayerInfo : MonoBehaviour {
 
     private ServiceReference<IInputService> m_inputService = new ServiceReference<IInputService>();
-
-
+    FoxAnimationHelper animHelper;
     CreateGameBoardFunctiom gameBoard;
+    public GameObject fireBall;
+
     public bool action;
     public Vector2 position;
     Vector2 input;
     Vector2 previousPosition;
-    public int rythmCount;
+    public int rythmCount = 0;
+    
+    bool active;
+    bool fire;
+
 	// Use this for initialization
 	void Start () {
 
         gameBoard = new CreateGameBoardFunctiom();
         transform.position = gameBoard.boxPositions[(int)position.x, (int)position.y];
         previousPosition = position;
+        animHelper = GetComponent<FoxAnimationHelper>();
+        animHelper.OnArrivedToDestination += ReachDestination;
+        active = true;
+        fire = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
         action = true;
+       
         if(!m_inputService.isRegistered())
         {
             Debug.Log("Not Registered");
             return;
         }
-
-        GetInput();
+        if(active)
+        {
+            GetInput();
+            if(fire && rythmCount >=3)
+            {
+                ShootFire();
+            }
+           
+        }
 
         if(previousPosition == position)
         {
@@ -41,13 +60,21 @@ public class PlayerInfo : MonoBehaviour {
         else
         {
             previousPosition = position;
+            animHelper.MoveTo(new Vector3(gameBoard.boxPositions[(int)position.x, (int)position.y].x, transform.position.y, gameBoard.boxPositions[(int)position.x, (int)position.y].z));
         }
-        transform.position = new Vector3(gameBoard.boxPositions[(int)position.x,(int)position.y].x,transform.position.y, gameBoard.boxPositions[(int)position.x, (int)position.y].z);
+        
 	}
+
+    private void OnDisable()
+    {
+        animHelper.OnArrivedToDestination -= ReachDestination;
+    }
+
     void GetInput()
     {
 
         input = m_inputService.Reference.GetMovementVector();
+        fire = m_inputService.Reference.PressedSelect();
 
         if (input.x > .4)
         {
@@ -85,5 +112,15 @@ public class PlayerInfo : MonoBehaviour {
         {
             position.y = 0;
         }
+    }
+    void ReachDestination()
+    {
+        active = true;
+    }
+
+    void ShootFire()
+    {
+        GameObject ball = Instantiate(fireBall, transform.position, Quaternion.identity);
+        ball.GetComponent<Rigidbody>().velocity = transform.forward * 5;
     }
 }
