@@ -24,6 +24,9 @@ namespace LD.Animation
         [SerializeField]
         private GameObject m_deathEffect;
 
+        [SerializeField]
+        private GameObject m_runEffect;
+
         private Animator m_animator;
         private AudioSource m_source;
         private bool m_alreadyMoving = false;
@@ -100,6 +103,7 @@ namespace LD.Animation
             //ReturnToIdle();
             //m_animator.SetBool(m_moveForward, true);
             m_animator.SetTrigger(m_run);
+            Instantiate(m_runEffect);
         }
 
         void AttackAnimation()
