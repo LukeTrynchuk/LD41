@@ -209,6 +209,7 @@ GameObject:
   - component: {fileID: 510411179}
   - component: {fileID: 510411178}
   - component: {fileID: 510411182}
+  - component: {fileID: 510411183}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -294,6 +295,18 @@ MonoBehaviour:
   bottomColor: {r: 0.49389058, g: 0.77205884, b: 0.74903804, a: 1}
   gradientLayer: 7
   camera: {fileID: 510411180}
+--- !u!114 &510411183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 510411177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 865b33ad17994479abd668bd04eac650, type: 2}
 --- !u!1001 &878032522
 Prefab:
   m_ObjectHideFlags: 0
