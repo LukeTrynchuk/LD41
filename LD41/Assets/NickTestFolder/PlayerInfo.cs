@@ -10,20 +10,21 @@ public class PlayerInfo : MonoBehaviour {
 
 
     CreateGameBoardFunctiom gameBoard;
-
+    public bool moved;
     public Vector2 position;
-    public Vector2 input;
+    Vector2 input;
+    Vector2 previousPosition;
 	// Use this for initialization
 	void Start () {
 
         gameBoard = new CreateGameBoardFunctiom();
         transform.position = gameBoard.boxPositions[(int)position.x, (int)position.y];
-
+        previousPosition = position;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+        moved = true;
         if(!m_inputService.isRegistered())
         {
             Debug.Log("Not Registered");
@@ -31,7 +32,14 @@ public class PlayerInfo : MonoBehaviour {
         }
 
         GetInput();
-
+        if(previousPosition == position)
+        {
+            moved = false;
+        }
+        else
+        {
+            previousPosition = position;
+        }
         transform.position = gameBoard.boxPositions[(int)position.x,(int)position.y];
 	}
     void GetInput()
