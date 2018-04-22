@@ -10,6 +10,7 @@ public class Fireball : MonoBehaviour {
     KillCounter_Behaviour killCounter;
     GameObject environment;
     CameraShake camShake;
+    
     // Use this for initialization
     void Start () {
         killCounter = GameObject.FindWithTag("KillCounter").GetComponent<KillCounter_Behaviour>();

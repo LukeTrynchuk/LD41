@@ -12,6 +12,7 @@ public class PlayerInfo : MonoBehaviour {
     FoxAnimationHelper animHelper;
     CreateGameBoardFunctiom gameBoard;
     public GameObject fireBall;
+    public GameObject deathmsg;
 
     public bool action;
     public Vector2 position;
@@ -38,6 +39,10 @@ public class PlayerInfo : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        if(health<=0)
+        {
+            deathmsg.SetActive(true);
+        }
         action = false;
        
         if(!m_inputService.isRegistered())
