@@ -6,10 +6,12 @@ using System;
 namespace LD.Animation
 {
     [RequireComponent(typeof(Animator))]
+    [RequireComponent(typeof(AudioSource))]
     public class ReaperAnimationHelper : MonoBehaviour
     {
         #region Public Variables
         public System.Action OnArrivedToDestination;
+        public System.Action OnAttackedTarget;
         #endregion
 
         #region Private Variables
@@ -22,7 +24,11 @@ namespace LD.Animation
         [SerializeField]
         private GameObject m_deathEffect;
 
+        [SerializeField]
+        private AudioClip[] m_wooshClips;
+
         private Animator m_animator;
+        private AudioSource m_source;
         private bool m_alreadyMoving = false;
         private bool m_alreadyAttacking = false;
 
@@ -41,6 +47,7 @@ namespace LD.Animation
 		private void Start()
 		{
             m_animator = GetComponent<Animator>();
+            m_source = GetComponent<AudioSource>();
 		}
 
         public void MoveTo(Vector3 positionToMoveTo)
@@ -85,7 +92,8 @@ namespace LD.Animation
 		#endregion
 
 		#region Utility Methods
-		void ReturnToIdle()
+
+        void ReturnToIdle()
         {
             m_animator.SetBool(m_moveForward, false);
             m_animator.SetBool(m_jump, false);
@@ -151,11 +159,9 @@ namespace LD.Animation
                 yield return null;
             }
 
-
+            m_alreadyMoving = false;
 
             FireDoneEvent();
-
-            m_alreadyMoving = false;
 		}
 
         private IEnumerator Attack(Vector3 pos)
@@ -185,10 +191,22 @@ namespace LD.Animation
 
 
             AttackAnimation();
+            StartCoroutine(PlayAttackAudio());
 
             yield return new WaitForSeconds(1f);
 
             m_alreadyAttacking = false;
+
+            FireDoneAttackingEvent();
+        }
+
+        private IEnumerator PlayAttackAudio()
+        {
+            yield return new WaitForSeconds(0.6f);
+            int index = UnityEngine.Random.Range(0, m_wooshClips.Length);
+            m_source.clip = m_wooshClips[index];
+            m_source.pitch = UnityEngine.Random.Range(0.9f, 1.1f);
+            m_source.Play();
         }
 
         private Quaternion GetRotationQuaternion(Vector3 desirePosition)
@@ -214,6 +232,14 @@ namespace LD.Animation
                 return;
 
             OnArrivedToDestination();
+        }
+
+        private void FireDoneAttackingEvent()
+        {
+            if (OnAttackedTarget == null)
+                return;
+
+            OnAttackedTarget();
         }
 
         #endregion
