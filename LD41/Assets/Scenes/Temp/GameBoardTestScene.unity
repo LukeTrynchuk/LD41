@@ -1288,6 +1288,10 @@ Prefab:
       propertyPath: m_TagString
       value: KillCounter
       objectReference: {fileID: 0}
+    - target: {fileID: 1872859974921156, guid: cbca60246c13a477d9b4a3c1650deb0b, type: 2}
+      propertyPath: m_TagString
+      value: HealthCounter
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cbca60246c13a477d9b4a3c1650deb0b, type: 2}
   m_IsPrefabParent: 0

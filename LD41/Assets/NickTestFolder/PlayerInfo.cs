@@ -4,6 +4,7 @@ using UnityEngine;
 using LD.Core.Services;
 using LD.UserInput;
 using LD.Animation;
+using LD.UI;
 
 public class PlayerInfo : MonoBehaviour {
 
@@ -17,7 +18,7 @@ public class PlayerInfo : MonoBehaviour {
     Vector2 input;
     Vector2 previousPosition;
     public int rythmCount = 0;
-    
+    public int health = 3;
     bool active;
     bool fire;
 
@@ -28,6 +29,7 @@ public class PlayerInfo : MonoBehaviour {
         transform.position = gameBoard.boxPositions[(int)position.x, (int)position.y];
         previousPosition = position;
         animHelper = GetComponent<FoxAnimationHelper>();
+        
         animHelper.OnArrivedToDestination += ReachDestination;
         active = true;
         fire = false;

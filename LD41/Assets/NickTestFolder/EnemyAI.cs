@@ -2,19 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using LD.Animation;
+using LD.UI;
 
 public class EnemyAI : MonoBehaviour {
 
     CreateGameBoardFunctiom gameBoard;
     ReaperAnimationHelper animHelper;
     GameObject player;
+    HealthCounter_Behaviour hpBeh;
 
     public Vector2 position;
     Vector2 playerPosition;
 
     bool xvalue = false;
     bool yvalue = false;
-    bool attack = false;
 
     // Use this for initialization
     void Start () {
@@ -22,6 +23,7 @@ public class EnemyAI : MonoBehaviour {
         gameBoard = new CreateGameBoardFunctiom();
         transform.position = gameBoard.boxPositions[(int)position.x, (int)position.y];
         animHelper = GetComponent<ReaperAnimationHelper>();
+        hpBeh = GameObject.FindWithTag("HealthCounter").GetComponent<HealthCounter_Behaviour>();
     }
 	
 	// Update is called once per frame
@@ -33,6 +35,8 @@ public class EnemyAI : MonoBehaviour {
             if (AttackCheck())
             {
                 animHelper.AttackPosition(gameBoard.boxPositions[(int)playerPosition.x, (int)playerPosition.y]);
+                player.GetComponent<PlayerInfo>().health -= 1;
+                hpBeh.SetHealth(player.GetComponent<PlayerInfo>().health);
             }
             else
             {
