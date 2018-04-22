@@ -9,7 +9,7 @@ public class Fireball : MonoBehaviour {
     KillCounter_Behaviour killCounter;
 	// Use this for initialization
 	void Start () {
-		
+        killCounter = GameObject.FindWithTag("KillCounter").GetComponent<KillCounter_Behaviour>();
 	}
 	
 	// Update is called once per frame

@@ -36,7 +36,7 @@ public class PlayerInfo : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        action = true;
+        action = false;
        
         if(!m_inputService.isRegistered())
         {
@@ -60,6 +60,7 @@ public class PlayerInfo : MonoBehaviour {
         else
         {
             previousPosition = position;
+            action = true;
             animHelper.MoveTo(new Vector3(gameBoard.boxPositions[(int)position.x, (int)position.y].x, transform.position.y, gameBoard.boxPositions[(int)position.x, (int)position.y].z));
         }
         
@@ -117,7 +118,6 @@ public class PlayerInfo : MonoBehaviour {
     {
         active = true;
     }
-
     void ShootFire()
     {
         GameObject ball = Instantiate(fireBall, transform.position, Quaternion.identity);

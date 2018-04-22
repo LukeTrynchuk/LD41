@@ -38,8 +38,8 @@ namespace LD.Animation
         private const string m_spinAttack = "Spin Attack";
 
         //Animator trigger names
-        private const string m_slash1 = "Slash Attack 01";
-        private const string m_slash2 = "Slash Attack 02";
+        private const string m_slash1 = "SlashAttack01";
+        private const string m_slash2 = "SlashAttack02";
         private const string m_die = "Die";
 		#endregion
 

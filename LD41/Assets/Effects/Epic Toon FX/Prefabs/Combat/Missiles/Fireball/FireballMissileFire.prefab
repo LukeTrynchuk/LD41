@@ -65,6 +65,7 @@ GameObject:
   - component: {fileID: 8262750}
   - component: {fileID: 54127572019795292}
   - component: {fileID: 114003441675736954}
+  - component: {fileID: 65160655005863834}
   m_Layer: 0
   m_Name: FireballMissileFire
   m_TagString: Untagged
@@ -109,7 +110,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 147436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.4385958, y: -2.786334, z: -8.083607}
+  m_LocalPosition: {x: 0.7233174, y: -2.005571, z: 4.880231}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 496296}
@@ -334,7 +335,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 0
+  randomSeed: 1468383007
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3647,7 +3648,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: 0
+  randomSeed: 1378295019
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -6966,7 +6967,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 0
+  randomSeed: 1352833995
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -10303,7 +10304,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: 0
+  randomSeed: 1689568429
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -13610,7 +13611,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: 0
+  randomSeed: 1551067323
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -17159,6 +17160,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!65 &65160655005863834
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147436}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.50595236, y: 1.1926041, z: 0.9439106}
+  m_Center: {x: 0.25296617, y: -0.034030437, z: -0.076037884}
 --- !u!114 &114003441675736954
 MonoBehaviour:
   m_ObjectHideFlags: 1

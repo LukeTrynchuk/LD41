@@ -14,6 +14,8 @@ public class EnemyAI : MonoBehaviour {
 
     bool xvalue = false;
     bool yvalue = false;
+    bool attack = false;
+
     // Use this for initialization
     void Start () {
         player = GameObject.FindWithTag("Player");
@@ -28,8 +30,15 @@ public class EnemyAI : MonoBehaviour {
         playerPosition = player.GetComponent<PlayerInfo>().position;
         if (player.GetComponent<PlayerInfo>().action)
         {
-            EnemyMovement();
-            animHelper.MoveTo(new Vector3(gameBoard.boxPositions[(int)position.x, (int)position.y].x, transform.position.y, gameBoard.boxPositions[(int)position.x, (int)position.y].z));
+            if (AttackCheck())
+            {
+                animHelper.AttackPosition(gameBoard.boxPositions[(int)playerPosition.x, (int)playerPosition.y]);
+            }
+            else
+            {
+                EnemyMovement();
+                animHelper.MoveTo(new Vector3(gameBoard.boxPositions[(int)position.x, (int)position.y].x, transform.position.y, gameBoard.boxPositions[(int)position.x, (int)position.y].z));
+            }
         }
 
 	}
@@ -70,5 +79,20 @@ public class EnemyAI : MonoBehaviour {
         yvalue = false;
     }
 
+    bool AttackCheck()
+    {
+        if(Mathf.Abs(playerPosition.x - position.x) == 1 && playerPosition.y == position.y)
+        {
+            return true;
+        }
+        else if(Mathf.Abs(playerPosition.y - position.y) == 1 && playerPosition.x == position.x)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 
 }

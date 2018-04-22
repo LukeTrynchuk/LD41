@@ -476,8 +476,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1375943100608886}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.13951488, y: 0.05971009, z: -0.12573567}
-  m_LocalScale: {x: 0.05741353, y: 0.05741355, z: 0.05741355}
+  m_LocalPosition: {x: -0.2531, y: 0.1085, z: 0}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children:
   - {fileID: 4450860233094346}
   m_Father: {fileID: 0}
@@ -652,7 +652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95fc55fee74873e4b835d2b2804f46a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireBall: {fileID: 0}
+  fireBall: {fileID: 147436, guid: 3b671081e44be1c4aa4355e8ba6e8a5e, type: 2}
   action: 0
   position: {x: 0, y: 0}
   rythmCount: 0
