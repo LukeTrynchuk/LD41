@@ -24,6 +24,7 @@ namespace LD.Animation
 
         private Animator m_animator;
         private bool m_alreadyMoving = false;
+        private bool m_alreadyAttacking = false;
 
         //Animator bool names
         private const string m_moveForward = "Move Forward";
@@ -31,8 +32,8 @@ namespace LD.Animation
         private const string m_spinAttack = "Spin Attack";
 
         //Animator trigger names
-        private const string m_slash1 = "Slack Attack 01";
-        private const string m_slash2 = "Slack Attack 02";
+        private const string m_slash1 = "Slash Attack 01";
+        private const string m_slash2 = "Slash Attack 02";
         private const string m_die = "Die";
 		#endregion
 
@@ -44,14 +45,27 @@ namespace LD.Animation
 
         public void MoveTo(Vector3 positionToMoveTo)
         {
-            if (m_alreadyMoving)
+            if (m_alreadyMoving || m_alreadyAttacking)
             {
-                Debug.Log("Reaper already moving. Wait for reaper to finish " +
-                          "moving before giving it a new destination to move to.");            
+                Debug.Log("Reaper already moving/attacking. Wait for reaper to finish " +
+                          "moving/attacking before giving it a new destination to move to.");            
 				return;
             }
 
             StartCoroutine(Move(positionToMoveTo));
+        }
+
+        public void AttackPosition(Vector3 positionToAttack)
+        {
+            if (m_alreadyMoving || m_alreadyAttacking)
+            {
+                Debug.Log("Reaper already moving/attacking. Wait for reaper to finish " +
+                          "moving/attacking before giving it a new destination to move to.");
+                return;
+            }
+
+            StartCoroutine(Attack(positionToAttack));
+
         }
 
         public void SetToDead()
@@ -84,6 +98,20 @@ namespace LD.Animation
             m_animator.SetBool(m_moveForward, true);
         }
 
+        void AttackAnimation()
+        {
+            ReturnToIdle();
+            int i = UnityEngine.Random.Range(1, 3);
+
+            if(i == 1)
+            {
+                m_animator.SetTrigger(m_slash1);
+                return;
+            }
+
+            m_animator.SetTrigger(m_slash2);
+        }
+
         private IEnumerator Die()
         {
             yield return new WaitForSeconds(2.0f);
@@ -94,7 +122,7 @@ namespace LD.Animation
 		{
             m_alreadyMoving = true;
 
-            Vector3 attractionVec = transform.position - pos;
+            Vector3 attractionVec = pos - transform.position;
             Quaternion desiredQuat = GetRotationQuaternion(pos);
 
             float m_startTime = 0f;
@@ -130,19 +158,53 @@ namespace LD.Animation
             m_alreadyMoving = false;
 		}
 
+        private IEnumerator Attack(Vector3 pos)
+        {
+            m_alreadyAttacking = true;
+
+            //Rotate towards target.
+            Vector3 attractionVec = pos - transform.position;
+
+            if(Vector3.Angle(attractionVec, transform.forward) > 30f)
+            {
+				Quaternion desiredQuat = GetRotationQuaternion(pos);
+				float m_startTime = 0f;
+				Quaternion originalQuat = transform.rotation;
+				
+				while (m_startTime <= m_timeToTurn)
+				{
+					m_startTime += Time.deltaTime;
+					
+					Quaternion rot = originalQuat;
+					rot = Quaternion.Slerp(rot, desiredQuat, m_startTime / m_timeToTurn);
+					transform.rotation = rot;
+					yield return null;
+					
+				}            
+            }
+
+
+            AttackAnimation();
+
+            yield return new WaitForSeconds(1f);
+
+            m_alreadyAttacking = false;
+        }
+
         private Quaternion GetRotationQuaternion(Vector3 desirePosition)
         {
             Vector3 attractionVec = desirePosition - transform.position;
 
             float angle = Vector3.Angle(transform.forward, attractionVec);
             float rightAngle = Vector3.Angle(transform.right, attractionVec);
+            float leftAngle = Vector3.Angle(-transform.right, attractionVec);
 
-            if (angle < rightAngle)
+            if (leftAngle < rightAngle)
             {
                 angle *= -1;
             }
 
-            Quaternion desiredQuat = Quaternion.Euler(new Vector3(0, angle, 0));
+            Quaternion desiredQuat = transform.rotation *  Quaternion.Euler(new Vector3(0, angle, 0));
             return desiredQuat;
         }
 
