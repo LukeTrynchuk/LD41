@@ -6,15 +6,15 @@ using LD.Animation;
 public class TestAnimatorController : MonoBehaviour 
 {
 
-    public ReaperAnimationHelper m_reaper;
+    public FoxAnimationHelper m_reaper;
 
 	private void Update()
 	{
 		if(Input.GetKeyDown(KeyCode.P))
         {
-            //m_reaper.SetToDead();
+            m_reaper.SetToDead();
             //m_reaper.MoveTo(this.transform.position);
-            m_reaper.AttackPosition(this.transform.position);
+            //m_reaper.AttackPosition(this.transform.position);
         }
 	}
 }

@@ -1,13 +1,14 @@
 ﻿<Properties StartupConfiguration="{855AD4BC-D690-5F48-1B48-EA6DD5D790C8}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Effects/EnemyDieEffectBehaviour.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Animation/ReaperAnimationHelper.cs">
     <Files>
       <File FileName="Assets/Scripts/Audio/TransitionAudioMixer.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/PostProcessing/GradientBackground.cs" Line="1" Column="1" />
       <File FileName="Assets/Shaders/Gradient.shader" Line="1" Column="1" />
       <File FileName="Assets/Scripts/General/RotateObjectConstantSpeed.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Animation/ReaperAnimationHelper.cs" Line="64" Column="81" />
-      <File FileName="Assets/Scripts/Temp/TestAnimatorController.cs" Line="15" Column="34" />
-      <File FileName="Assets/Scripts/Effects/EnemyDieEffectBehaviour.cs" Line="4" Column="1" />
+      <File FileName="Assets/Scripts/Temp/TestAnimatorController.cs" Line="21" Column="1" />
+      <File FileName="Assets/Scripts/Effects/EnemyDieEffectBehaviour.cs" Line="27" Column="19" />
+      <File FileName="Assets/Scripts/Animation/FoxAnimationHelper.cs" Line="4" Column="1" />
+      <File FileName="Assets/Scripts/Animation/ReaperAnimationHelper.cs" Line="205" Column="51" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
