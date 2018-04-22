@@ -40,7 +40,7 @@ public class PlayerInfo : MonoBehaviour {
         {
             previousPosition = position;
         }
-        transform.position = gameBoard.boxPositions[(int)position.x,(int)position.y];
+        transform.position = new Vector3(gameBoard.boxPositions[(int)position.x,(int)position.y].x,transform.position.y, gameBoard.boxPositions[(int)position.x, (int)position.y].z);
 	}
     void GetInput()
     {
@@ -49,19 +49,19 @@ public class PlayerInfo : MonoBehaviour {
 
         if (input.x > .4)
         {
-            position.x--;
+            position.y++;
         }
         if (input.x < -.4)
         {
-            position.x++;
+            position.y--;
         }
         if (input.y > .4)
         {
-            position.y++;
+            position.x++;
         }
         if (input.y < -.4)
         {
-            position.y--;
+            position.x--;
         }
         BoundCheck();
     }

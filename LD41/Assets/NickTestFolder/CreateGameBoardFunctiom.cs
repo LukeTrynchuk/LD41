@@ -14,10 +14,10 @@ public class CreateGameBoardFunctiom{
         {
             for(int y = 0; y<5;y++)
             {
-                boxPositions[x,y] = new Vector3(-2 + x, 0, 2 - y);
+                boxPositions[x,y] = new Vector3(-2 + x, 1, 2 - y);
             }
         }
-        SpawnGrid();
+        //SpawnGrid();
 	}
 	
 	// Update is called once per frame

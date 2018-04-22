@@ -26,7 +26,7 @@ public class EnemyAI : MonoBehaviour {
         if (player.GetComponent<PlayerInfo>().moved)
         {
             EnemyMovement();
-            transform.position = gameBoard.boxPositions[(int)position.x, (int)position.y];
+            transform.position = new Vector3(gameBoard.boxPositions[(int)position.x, (int)position.y].x, transform.position.y, gameBoard.boxPositions[(int)position.x, (int)position.y].z);
         }
 
 	}
