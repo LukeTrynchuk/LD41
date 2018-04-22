@@ -6,10 +6,11 @@ public class BeatActivator : MonoBehaviour {
 
     bool active = false;
     GameObject beat;
+    GameObject player;
     // Use this for initialization
     void Start()
     {
-
+        player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
@@ -19,10 +20,11 @@ public class BeatActivator : MonoBehaviour {
         if (Input.anyKeyDown && active)
         {
             Destroy(beat);
+            player.GetComponent<PlayerInfo>().rythmCount += 1;
         }
         else if (Input.anyKeyDown)
         {
-
+            player.GetComponent<PlayerInfo>().rythmCount = 0;
         }
     }
 

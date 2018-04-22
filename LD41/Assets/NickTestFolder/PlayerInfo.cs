@@ -10,10 +10,11 @@ public class PlayerInfo : MonoBehaviour {
 
 
     CreateGameBoardFunctiom gameBoard;
-    public bool moved;
+    public bool action;
     public Vector2 position;
     Vector2 input;
     Vector2 previousPosition;
+    public int rythmCount;
 	// Use this for initialization
 	void Start () {
 
@@ -24,7 +25,7 @@ public class PlayerInfo : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        moved = true;
+        action = true;
         if(!m_inputService.isRegistered())
         {
             Debug.Log("Not Registered");
@@ -32,9 +33,10 @@ public class PlayerInfo : MonoBehaviour {
         }
 
         GetInput();
+
         if(previousPosition == position)
         {
-            moved = false;
+            action = false;
         }
         else
         {

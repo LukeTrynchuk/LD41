@@ -23,7 +23,7 @@ public class EnemyAI : MonoBehaviour {
 	void Update () {
 
         playerPosition = player.GetComponent<PlayerInfo>().position;
-        if (player.GetComponent<PlayerInfo>().moved)
+        if (player.GetComponent<PlayerInfo>().action)
         {
             EnemyMovement();
             transform.position = new Vector3(gameBoard.boxPositions[(int)position.x, (int)position.y].x, transform.position.y, gameBoard.boxPositions[(int)position.x, (int)position.y].z);
