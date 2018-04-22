@@ -55,6 +55,8 @@ namespace LD.Animation
         {
             ReturnToIdle();
             m_animator.SetBool(m_die, true);
+            StartCoroutine(Die());
+
         }
 
 		#endregion
@@ -71,6 +73,12 @@ namespace LD.Animation
         {
             ReturnToIdle();
             m_animator.SetBool(m_moveForward, true);
+        }
+
+        private IEnumerator Die()
+        {
+            yield return new WaitForSeconds(2.0f);
+            Destroy(this.gameObject);
         }
 
         private IEnumerator Move(Vector3 pos)

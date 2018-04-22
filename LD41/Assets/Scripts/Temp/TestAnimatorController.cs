@@ -12,7 +12,7 @@ public class TestAnimatorController : MonoBehaviour
 	{
 		if(Input.GetKeyDown(KeyCode.P))
         {
-            m_reaper.MoveTo(new Vector3(0, 0, -1));
+            m_reaper.SetToDead();
         }
 	}
 }
