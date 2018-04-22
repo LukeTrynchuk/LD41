@@ -19,6 +19,9 @@ namespace LD.Animation
         [SerializeField]
         private float m_timeToTurn;
 
+        [SerializeField]
+        private GameObject m_deathEffect;
+
         private Animator m_animator;
         private bool m_alreadyMoving = false;
 
@@ -55,8 +58,14 @@ namespace LD.Animation
         {
             ReturnToIdle();
             m_animator.SetBool(m_die, true);
-            StartCoroutine(Die());
 
+            GameObject effect = Instantiate(m_deathEffect);
+            effect.transform.position = transform.position;
+            effect.transform.position = new Vector3(effect.transform.position.x,
+                                                    effect.transform.position.y + 0.5f,
+                                                    effect.transform.position.z);
+
+            StartCoroutine(Die());
         }
 
 		#endregion

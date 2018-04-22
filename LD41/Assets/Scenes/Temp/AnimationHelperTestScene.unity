@@ -196,6 +196,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_timeToMove: 0.3
   m_timeToTurn: 0.2
+  m_deathEffect: {fileID: 1757304823809702, guid: 1b2c30301640d41b2a43cbd3160991ce,
+    type: 2}
 --- !u!1 &1011015495
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,7 +316,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1350532286}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
