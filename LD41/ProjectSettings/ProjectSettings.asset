@@ -12,7 +12,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DogHouseStudios
-  productName: Pulse Cannon
+  productName: Fire Dance
   defaultCursor: {fileID: 2800000, guid: 0cd7aaeba87d749b187fc8df408f5527, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -158,7 +158,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Standalone: com.DogHouseStudios.PulseCannon
+    Standalone: com.DogHouseStudios.FireDance
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
@@ -260,7 +260,7 @@ PlayerSettings:
   - m_BuildTarget: Standalone
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 116bd572a2baa4e82817096680a2a1a0, type: 3}
+      m_Icon: {fileID: 2800000, guid: abb0bccdfcd284942a6b25d6b223d847, type: 3}
       m_Width: 1024
       m_Height: 1024
       m_Kind: 0
@@ -297,7 +297,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 116bd572a2baa4e82817096680a2a1a0, type: 3}
+      m_Icon: {fileID: 2800000, guid: abb0bccdfcd284942a6b25d6b223d847, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
